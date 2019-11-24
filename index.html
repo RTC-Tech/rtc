@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>RTC</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="RTC &raquo; Feed" href="/https://rtc-tech.github.io/RTC/feed/" />
+<link rel="alternate" type="application/rss+xml" title="RTC &raquo; Comments Feed" href="/https://rtc-tech.github.io/RTC/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='/https://rtc-tech.github.io/RTC/wp-includes/css/dist/block-library/style.min.css?ver=5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='/https://rtc-tech.github.io/RTC/wp-includes/css/dist/block-library/theme.min.css?ver=5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='/https://rtc-tech.github.io/RTC/wp-content/themes/twentysixteen/genericons/genericons.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='/https://rtc-tech.github.io/RTC/wp-content/themes/twentysixteen/style.css?ver=5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='/https://rtc-tech.github.io/RTC/wp-content/themes/twentysixteen/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='/wp-content/themes/twentysixteen/css/ie.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='/wp-content/themes/twentysixteen/css/ie8.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='/wp-content/themes/twentysixteen/css/ie7.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='elementor-icons-css'  href='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.7.5' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.7.5' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href='/https://rtc-tech.github.io/RTC/wp-content/uploads/elementor/css/global.css?ver=1574463607' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-11-css'  href='/https://rtc-tech.github.io/RTC/wp-content/uploads/elementor/css/post-11.css?ver=1574612237' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css'  href='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.9.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-regular-css'  href='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.9.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.9.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css'  href='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.9.0' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<script type='text/javascript' src='/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3'></script>
+<![endif]-->
+<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='/https://rtc-tech.github.io/RTC/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/https://rtc-tech.github.io/RTC/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/https://rtc-tech.github.io/RTC/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3" />
+<link rel="canonical" href="/https://rtc-tech.github.io/RTC/" />
+<link rel='shortlink' href='/https://rtc-tech.github.io/RTC/' />
+<link rel="alternate" type="application/json+oembed" href="/https://rtc-tech.github.io/RTC/wp-json/oembed/1.0/embed?url=%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/https://rtc-tech.github.io/RTC/wp-json/oembed/1.0/embed?url=%2F&#038;format=xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="/https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/cropped-SiteIcon-32x32.png" sizes="32x32" />
+<link rel="icon" href="/https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/cropped-SiteIcon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="/https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/cropped-SiteIcon-180x180.png" />
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2019/11/cropped-SiteIcon-270x270.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
+<body class="home page-template page-template-elementor_canvas page page-id-11 wp-embed-responsive elementor-default elementor-template-canvas elementor-page elementor-page-11">
+			<div data-elementor-type="wp-page" data-elementor-id="11" class="elementor elementor-11" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-7fe6b06 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7fe6b06" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-088fc39 elementor-column elementor-col-50 elementor-top-column" data-id="088fc39" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-355bf1d elementor-widget elementor-widget-image" data-id="355bf1d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="840" height="489" src="/https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/RTC_Logo.png" class="attachment-large size-large" alt="" srcset="/https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/RTC_Logo.png 1003w, /https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/RTC_Logo-300x175.png 300w, /https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/RTC_Logo-768x447.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-d089294 elementor-column elementor-col-50 elementor-top-column" data-id="d089294" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-a0e486f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="a0e486f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5eaf8e5 elementor-column elementor-col-20 elementor-inner-column" data-id="5eaf8e5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-702ca13 elementor-widget elementor-widget-heading" data-id="702ca13" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="#WhatIS">About us</a></h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-edc8b82 elementor-column elementor-col-20 elementor-inner-column" data-id="edc8b82" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5c19f7b elementor-widget elementor-widget-heading" data-id="5c19f7b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="#Services">Services</a></h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a2e9922 elementor-column elementor-col-20 elementor-inner-column" data-id="a2e9922" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-99a7f1a elementor-widget elementor-widget-heading" data-id="99a7f1a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="#WhyWork">Why us</a></h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-03de629 elementor-column elementor-col-20 elementor-inner-column" data-id="03de629" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a98f4c6 elementor-widget elementor-widget-heading" data-id="a98f4c6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="/https://rtc-tech.github.io/RTC/store/">Store</a></h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-da9e76f elementor-column elementor-col-20 elementor-inner-column" data-id="da9e76f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c6d9d63 elementor-widget elementor-widget-heading" data-id="c6d9d63" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="#Contact">Contact</a></h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-5ee50f2 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="5ee50f2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/www.youtube.com\/watch?v=0ox05fXwQUg&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
+								<div class="elementor-background-video-container">
+													<div class="elementor-background-video-embed"></div>
+												</div>
+									<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b600b1c elementor-column elementor-col-100 elementor-top-column" data-id="b600b1c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c838b44 elementor-absolute elementor-invisible elementor-widget elementor-widget-heading" data-id="c838b44" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;lightSpeedIn&quot;,&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Greetings to our shop</h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-2946fd1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2946fd1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-80c4e9e elementor-column elementor-col-100 elementor-top-column" data-id="80c4e9e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5dd7bbe elementor-widget elementor-widget-spacer" data-id="5dd7bbe" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-eb82590 elementor-widget elementor-widget-menu-anchor" data-id="eb82590" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="WhatIS" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-723e5ac elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="723e5ac" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5d02729 elementor-column elementor-col-50 elementor-top-column" data-id="5d02729" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f038999 elementor-widget elementor-widget-image" data-id="f038999" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="840" height="702" src="/https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/laptop-2298286_1280-1024x856.png" class="attachment-large size-large" alt="" srcset="/https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/laptop-2298286_1280-1024x856.png 1024w, /https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/laptop-2298286_1280-300x251.png 300w, /https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/laptop-2298286_1280-768x642.png 768w, /https://rtc-tech.github.io/RTC/wp-content/uploads/2019/11/laptop-2298286_1280.png 1280w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4d6714f elementor-column elementor-col-50 elementor-top-column" data-id="4d6714f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d4aee71 elementor-widget elementor-widget-heading" data-id="d4aee71" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">What is RTC?</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-da37de8 elementor-widget elementor-widget-text-editor" data-id="da37de8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Established in 2019, Refurbished Technology Center and our mission is to acquire recycled technology and give it a second life. We take pride and professionalism and state of the art tools to achieve our objectives.</p><p>Looking for a well priced technology product or parts? Look no further, we have what you&#8217;re looking for in stock.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-2a247c6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2a247c6" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ea6bbfa elementor-column elementor-col-100 elementor-top-column" data-id="ea6bbfa" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f8a8367 elementor-widget elementor-widget-spacer" data-id="f8a8367" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e7e40d8 elementor-widget elementor-widget-menu-anchor" data-id="e7e40d8" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="Services" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-46295b3 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="46295b3" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8d78795 elementor-column elementor-col-100 elementor-top-column" data-id="8d78795" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d03b503 elementor-widget elementor-widget-heading" data-id="d03b503" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><strong>Services</strong></h2>		</div>
+				</div>
+				<section class="elementor-element elementor-element-e557bfc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="e557bfc" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ea4923b elementor-column elementor-col-33 elementor-inner-column" data-id="ea4923b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5b71262 elementor-widget elementor-widget-image" data-id="5b71262" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="/https://rtc-tech.github.io/RTC/wp-content/uploads/elementor/thumbs/black-and-gray-motherboard-2582937-1-scaled-oh5yjhy78jcdxmgmn8sv2dpdmdblykpol0sw6f5g5c.jpg" title="black-and-gray-motherboard-2582937 (1)" alt="black-and-gray-motherboard-2582937 (1)" />											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-6db826c elementor-column elementor-col-33 elementor-inner-column" data-id="6db826c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1c157bf elementor-widget elementor-widget-heading" data-id="1c157bf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Recycling</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3c07f86 elementor-widget elementor-widget-text-editor" data-id="3c07f86" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>We perform the recycling of used and old technologies. We also ensure that <strong>all data</strong> is safely and securely destroyed.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-52aa31b elementor-column elementor-col-33 elementor-inner-column" data-id="52aa31b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f9a25d3 elementor-widget elementor-widget-image" data-id="f9a25d3" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="/https://rtc-tech.github.io/RTC/wp-content/uploads/elementor/thumbs/access-blur-business-button-241649-scaled-oh5yjlpjzvhj82b61afdccr7zwt2td4lxjeu3izvgg.jpg" title="access-blur-business-button-241649" alt="access-blur-business-button-241649" />											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-eacf771 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="eacf771" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-30277d0 elementor-column elementor-col-33 elementor-inner-column" data-id="30277d0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5b7debb elementor-widget elementor-widget-heading" data-id="5b7debb" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Refurbishing</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-842a6ca elementor-widget elementor-widget-text-editor" data-id="842a6ca" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>We offer state of the art refurbished technology products. Hardware that has stood the test of time at the best price.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-72b1cf5 elementor-column elementor-col-33 elementor-inner-column" data-id="72b1cf5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e0df1c8 elementor-widget elementor-widget-image" data-id="e0df1c8" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="/https://rtc-tech.github.io/RTC/wp-content/uploads/elementor/thumbs/person-soldering-chip-2628105-scaled-oh5yjsafbpqjhc1lyv9rbt3g5lwnb8uqafz8ggq48w.jpg" title="person-soldering-chip-2628105" alt="person-soldering-chip-2628105" />											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-7209286 elementor-column elementor-col-33 elementor-inner-column" data-id="7209286" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8d7c1a7 elementor-widget elementor-widget-heading" data-id="8d7c1a7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Parts wholesaler</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0da5d60 elementor-widget elementor-widget-text-editor" data-id="0da5d60" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Are you a tech shop in need of a specific part for repair? Chances are we&#8217;ve got it in stock, wether it&#8217;s logic boards or other hardware.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-a418b59 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a418b59" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f9dbdfd elementor-column elementor-col-100 elementor-top-column" data-id="f9dbdfd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7e48844 elementor-widget elementor-widget-spacer" data-id="7e48844" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d6febdb elementor-widget elementor-widget-menu-anchor" data-id="d6febdb" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="WhyWork" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-f23be66 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f23be66" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d559b5c elementor-column elementor-col-100 elementor-top-column" data-id="d559b5c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-773418a elementor-widget elementor-widget-heading" data-id="773418a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Why work with us?</h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-9682b6b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9682b6b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c7baadd elementor-invisible elementor-column elementor-col-33 elementor-top-column" data-id="c7baadd" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0939dc0 elementor-view-default elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="0939dc0" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="far fa-thumbs-up"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >PROFESSIONALISM</span>
+				</h3>
+								<p class="elementor-icon-box-description">We are professional IT technicians who will display the highest levels of proficiency.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e1a48c8 elementor-view-default elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="e1a48c8" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="fas fa-bullseye"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >PROVEN SOLUTIONS</span>
+				</h3>
+								<p class="elementor-icon-box-description">We don't just identify problems. We offer real sustainable solutions that can be applied to solve all challenges.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-56c2b99 elementor-column elementor-col-33 elementor-top-column" data-id="56c2b99" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0f64ed5 elementor-widget elementor-widget-image" data-id="0f64ed5" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="/https://rtc-tech.github.io/RTC/wp-content/uploads/elementor/thumbs/business-computer-connection-data-1054397-1-scaled-oh60ffq2tnhk8nf8ei9l7kzc9p6xq7kw131lvgb7uw.jpg" title="business-computer-connection-data-1054397 (1)" alt="business-computer-connection-data-1054397 (1)" />											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-9bb1881 elementor-invisible elementor-column elementor-col-33 elementor-top-column" data-id="9bb1881" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f1e23f7 elementor-view-default elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="f1e23f7" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="far fa-check-circle"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >SECURITY</span>
+				</h3>
+								<p class="elementor-icon-box-description">We take privacy very seriously and ensure that <strong> all data </strong> is destroyed. We are certified AAA data security reliant</p>
+							</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-92dab21 elementor-view-default elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="92dab21" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="fas fa-parachute-box"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >EXPERIENCE</span>
+				</h3>
+								<p class="elementor-icon-box-description">We are experienced IT professionals and have been doing this kind of work for years.</p>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-229d03c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="229d03c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f1d2e31 elementor-column elementor-col-100 elementor-top-column" data-id="f1d2e31" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-58eab31 elementor-widget elementor-widget-spacer" data-id="58eab31" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-378d220 elementor-widget elementor-widget-menu-anchor" data-id="378d220" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="Contact" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-7589ddc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7589ddc" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-57ddcfd elementor-column elementor-col-100 elementor-top-column" data-id="57ddcfd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-549518e elementor-widget elementor-widget-heading" data-id="549518e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Contact</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-f3abaac elementor-widget elementor-widget-heading" data-id="f3abaac" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">For inquiries, please send an email to</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c7cc695 elementor-widget elementor-widget-heading" data-id="c7cc695" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="/https://rtc-tech.github.io/RTC/refurbtechcenter@gmail.com">refurbtechcenter@gmail.com</a></h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-c19db1f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c19db1f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-56f2f85 elementor-column elementor-col-100 elementor-top-column" data-id="56f2f85" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c63858a elementor-shape-rounded elementor-widget elementor-widget-social-icons" data-id="c63858a" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper">
+							<a href="" class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-animation-grow elementor-repeater-item-bc93c41" target="_blank">
+					<span class="elementor-screen-only">Facebook</span>
+					<i class="fab fa-facebook"></i>				</a>
+							<a href="" class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-animation-grow elementor-repeater-item-eedb524" target="_blank">
+					<span class="elementor-screen-only">Youtube</span>
+					<i class="fab fa-youtube"></i>				</a>
+							<a href="https://aboutme.google.com/u/2/?referer=gplus&amp;pageId=none" class="elementor-icon elementor-social-icon elementor-social-icon-google-plus elementor-animation-grow elementor-repeater-item-d2b7710" target="_blank">
+					<span class="elementor-screen-only">Google-plus</span>
+					<i class="fab fa-google-plus"></i>				</a>
+							<a href="" class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-animation-grow elementor-repeater-item-965982b" target="_blank">
+					<span class="elementor-screen-only">Linkedin</span>
+					<i class="fab fa-linkedin"></i>				</a>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f665062 elementor-widget elementor-widget-spacer" data-id="f665062" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-content/themes/twentysixteen/js/skip-link-focus-fix.js?ver=20160816'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-content/themes/twentysixteen/js/functions.js?ver=20181230'></script>
+<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-includes/js/wp-embed.min.js?ver=5.3'></script>
+<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.7.5'></script>
+<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.3'></script>
+<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'></script>
+<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=4.4.6'></script>
+<script type='text/javascript'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.7.5","urls":{"assets":"\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},"post":{"id":11,"title":"Home","excerpt":""}};
+</script>
+<script type='text/javascript' src='/https://rtc-tech.github.io/RTC/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.7.5'></script>
+	</body>
+</html>
